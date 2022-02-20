@@ -20,9 +20,7 @@ export class InMemoryTodoRepository extends TodoRepository {
   }
 
   save(entity: Todo): Promise<void> {
-    console.log(entity)
     this.todos.set(entity.id, entity);
-    console.log(this.todos)
     return Promise.resolve();
   }
 
